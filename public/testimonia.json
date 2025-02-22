@@ -1,0 +1,21 @@
+[
+    {
+      "id": 1,
+      "name": "Sheryl Berge",
+      "quote": "I love the fitness apparel and gear I purchased from this site. The quality is exceptional and the prices are unbeatable.",
+      "image": "https://randomuser.me/api/portraits/men/15.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Leland Kiehn",
+      "quote": "As a professional athlete, I rely on high-performance gear for my training. This site offers a great selection of top-notch products.",
+      "image": "https://randomuser.me/api/portraits/women/15.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Taylor Swift",
+      "quote": "Shopping here was a delightful experience. The products exceeded my expectations!",
+      "image": "https://randomuser.me/api/portraits/men/45.jpg"
+    }
+  ]
+  

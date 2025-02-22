@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-inter: "Inter", sans-serif;
+}
+/* Hide default cursor */
+body {
+  cursor: none; 
+  font-family: var(--font-inter);
+}
+html, body {
+  overflow-x: hidden;
+}
+@keyframes rotate-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* -------nav topbar--------- */
+.headerTopMenu{
+  @apply flex items-center gap-x-1 border-r-[1px] px-4;
+}
+.cartIconMenu{
+  @apply absolute -top-1 -right-1 text-[10px] font-medium w-4 h-4  bg-blue-500 text-white rounded-full flex items-center justify-center gap-x-1 border-r-[1px] ;
+}
+/* sidebar */
+.sidebar{
+  @apply absolute right-1 bottom-4 border grid text-2xl border-yellow-200 bg-white text-gray-900;
+}
+.sidebarButton{
+ @apply p-2 hover:bg-sky-500/10 duration-200 hover:text-sky-300;
+}
+/* Custom component classes */
+@layer components {
+  .animate-rotate-slow {
+    animation: rotate-slow 25s linear infinite;
+  }
+
+  .swiper-slide {
+    @apply transition-all duration-300 ease-[ease];
+    transition-property: transform, opacity;
+  }
+
+  .swiper-slide:hover {
+    @apply z-10;
+  }
+}
+
+/* Large red circle (Border Only) */
+.cursor-large {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(247, 108, 189, 0.7); 
+  border-radius: 50%;
+  background: transparent; 
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease-out; 
+  z-index: 9998;
+}
+
+/* Small pink dot */
+.cursor-small {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  background-color: #e94d4d; 
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.02s ease-out; 
+  z-index: 9999;
+}
+
+/* Hover effect */
+.cursor-large.hover {
+  width: 30px;
+  height: 30px;
+  border-width: 3px; 
+}
+
+.cursor-small.hover {
+  width: 10px;
+  height: 10px;
+}
+
+/* -----scroll bar---------- */
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 12px; 
+  height: 12px; 
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Soft neutral tone */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #7A1CAC, #AD49E1);
+  border-radius: 10px;
+  border: 3px solid #f0f0f0; 
+  transition: background 0.3s ease, transform 0.2s ease-in-out;
+}
+
+/* Hover effect for better interaction */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #5E0F99, #EBD3F8); 
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #AD49E1 #f0f0f0;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+
+

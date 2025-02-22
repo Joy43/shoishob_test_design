@@ -1,0 +1,127 @@
+Authentication (/auth)
+User Registration & Login
+
+POST /auth/register
+POST /auth/login
+GET /auth/logout (Authenticated)
+Phone Verification
+
+POST /auth/check-phone
+POST /auth/resend-otp-check-phone
+POST /auth/verify-phone
+Email Verification
+
+POST /auth/check-email
+POST /auth/resend-otp-check-email
+POST /auth/verify-email
+Password Recovery
+
+POST /auth/forgot-password
+POST /auth/verify-otp
+PUT /auth/reset-password
+Social Login
+
+POST /auth/social-login
+POST /auth/update-phone
+General Configurations (/config)
+GET /config → Fetch system configuration.
+Shipping Methods (/shipping-method)
+GET /shipping-method/detail/{id}
+GET /shipping-method/by-seller/{id}/{seller_is}
+POST /shipping-method/choose-for-order
+GET /shipping-method/chosen
+GET /shipping-method/check-shipping-type
+Cart Management (/cart)
+GET /cart → Get cart items.
+POST /cart/add → Add item to cart.
+PUT /cart/update → Update cart.
+DELETE /cart/remove → Remove an item.
+DELETE /cart/remove-all → Clear cart.
+Orders (/customer/order)
+GET /customer/order/get-order-by-id
+FAQs & Notifications
+GET /faq
+GET /notifications/
+GET /notifications/seen (Authenticated)
+Product Management (/products)
+Product Reviews
+
+GET /products/reviews/{product_id}
+GET /products/rating/{product_id}
+POST /products/reviews/submit (Authenticated)
+Product Queries
+
+GET /products/latest
+GET /products/featured
+GET /products/top-rated
+ANY /products/search
+POST /products/filter
+ANY /products/suggestion-product
+GET /products/details/{slug}
+GET /products/related-products/{product_id}
+GET /products/best-sellings
+GET /products/home-categories
+GET /products/discounted-product
+GET /products/most-demanded-product
+GET /products/shop-again-product (Authenticated)
+GET /products/just-for-you
+GET /products/most-searching
+Seller Routes (/seller)
+GET /seller/{seller_id}/products
+GET /seller/{seller_id}/seller-best-selling-products
+GET /seller/{seller_id}/seller-featured-product
+GET /seller/{seller_id}/seller-recommended-products
+Categories & Brands
+GET /categories
+GET /categories/products/{category_id}
+GET /categories/find-what-you-need
+GET /brands
+GET /brands/products/{brand_id}
+Customer Account (/customer)
+PUT /customer/cm-firebase-token
+GET /customer/get-restricted-country-list
+GET /customer/get-restricted-zip-list
+Customer Address
+
+POST /customer/address/add
+GET /customer/address/list
+DELETE /customer/address
+Customer Orders
+
+GET /customer/order/place
+GET /customer/order/offline-payment-method-list
+POST /customer/order/place-by-offline-payment
+GET /customer/order/details
+Authenticated Customer Routes (/customer with auth:api)
+Profile Management
+
+GET /customer/info
+PUT /customer/update-profile
+GET /customer/account-delete/{id}
+Address Management
+
+GET /customer/address/get/{id}
+PUT /customer/address/update
+Support Tickets
+
+POST /customer/support-ticket/create
+GET /customer/support-ticket/get
+GET /customer/support-ticket/conv/{ticket_id}
+POST /customer/support-ticket/reply/{ticket_id}
+GET /customer/support-ticket/close/{id}
+Comparison & Wishlist
+
+GET /customer/compare/list
+POST /customer/compare/product-store
+DELETE /customer/compare/clear-all
+GET /customer/compare/product-replace
+GET /customer/wish-list
+POST /customer/wish-list/add
+DELETE /customer/wish-list/remove
+Order Management
+
+GET /customer/order/place-by-wallet
+GET /customer/order/refund
+POST /customer/order/refund-store
+GET /customer/order/refund-details
+GET /customer/order/list

@@ -1,0 +1,138 @@
+/api/v1/products/featured
+https://fastdeals.ecommatrix.xyz/storage/app/public/category/2024-12-09-6756a636ae53f.webp
+const categories = [
+  {
+    id: 1,
+    image: "https://i.postimg.cc/02V4pMtr/1.jpg",
+    title: "Bushmills Black Bush Irish Whiskey",
+    volume: "XL",
+    link: "/cate",
+    price: "50.00",
+  },
+  {
+    id: 2,
+    image: "https://i.postimg.cc/VsBpkHnq/2.jpg",
+    title: "Another Whiskey",
+    volume: "2XL",
+    link: "https://lqrs.com/brands/bushmills/",
+    price: "40.00",
+  },
+  {
+    id: 3,
+    image: "https://i.postimg.cc/vHYjgLtp/3.jpg",
+    title: "Another Whiskey",
+    volume: "1L",
+    link: "https://lqrs.com/brands/bushmills/",
+    price: "40.00",
+  },
+  {
+    id: 4,
+    image: "https://i.postimg.cc/02V4pMtr/1.jpg",
+    title: "Another Whiskey",
+    volume: "1L",
+    link: "https://lqrs.com/brands/bushmills/",
+    price: "40.00",
+  },
+  {
+    id: 5,
+    image: "https://i.postimg.cc/02V4pMtr/1.jpg",
+    title: "Another Whiskey",
+    volume: "1L",
+    link: "https://lqrs.com/brands/bushmills/",
+    price: "40.00",
+  },
+  {
+    id: 6,
+    image: "https://i.postimg.cc/02V4pMtr/1.jpg",
+    title: "Another Whiskey",
+    volume: "1L",
+    link: "https://lqrs.com/brands/bushmills/",
+    price: "40.00",
+  },
+  {
+    id: 7,
+    image: "https://i.postimg.cc/VsBpkHnq/2.jpg",
+    title: "Another Whiskey",
+    volume: "1L",
+    link: "https://lqrs.com/brands/bushmills/",
+    price: "40.00",
+  },
+  {
+    id: 8,
+    image: "https://i.postimg.cc/VsBpkHnq/2.jpg",
+    title: "Another Whiskey",
+    volume: "1L",
+    link: "https://lqrs.com/brands/bushmills/",
+    price: "40.00",
+  },
+
+];
+
+
+const categories = [
+  {
+    id: 1,
+    image: "https://shoishob.com.bd/wp-content/uploads/2023/08/BC05CHQ044.jpg",
+    title: "Bushmills Black Bush Irish Whiskey",
+    volume: "XL",
+    link: "/cate",
+    price: "50.00",
+  },
+  {
+    id: 2,
+    image: "https://i.postimg.cc/VsBpkHnq/2.jpg",
+    title: "Another Whiskey",
+    volume: "2XL",
+    link: "https://lqrs.com/brands/bushmills/",
+    price: "40.00",
+  },
+  {
+    id: 3,
+    image: "https://i.postimg.cc/vHYjgLtp/3.jpg",
+    title: "Another Whiskey",
+    volume: "1L",
+    link: "https://lqrs.com/brands/bushmills/",
+    price: "40.00",
+  },
+  {
+    id: 4,
+    image: "https://i.postimg.cc/02V4pMtr/1.jpg",
+    title: "Another Whiskey",
+    volume: "1L",
+    link: "https://lqrs.com/brands/bushmills/",
+    price: "40.00",
+  },
+  {
+    id: 5,
+    image: "https://i.postimg.cc/02V4pMtr/1.jpg",
+    title: "Another Whiskey",
+    volume: "1L",
+    link: "https://lqrs.com/brands/bushmills/",
+    price: "40.00",
+  },
+  {
+    id: 6,
+    image: "https://i.postimg.cc/02V4pMtr/1.jpg",
+    title: "Another Whiskey",
+    volume: "1L",
+    link: "https://lqrs.com/brands/bushmills/",
+    price: "40.00",
+  },
+  {
+    id: 7,
+    image: "https://i.postimg.cc/VsBpkHnq/2.jpg",
+    title: "Another Whiskey",
+    volume: "1L",
+    link: "https://lqrs.com/brands/bushmills/",
+    price: "40.00",
+  },
+  {
+    id: 8,
+    image: "https://i.postimg.cc/VsBpkHnq/2.jpg",
+    title: "Another Whiskey",
+    volume: "1L",
+    link: "https://lqrs.com/brands/bushmills/",
+    price: "40.00",
+  },
+
+];

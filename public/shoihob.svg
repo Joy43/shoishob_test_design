@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 150" xmlns:xlink="http://www.w3.org/1999/xlink" class="logo-box">
+  <style>
+    /* General styles for the body */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 120vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+
+    /* Styling the SVG */
+    svg {
+      width: 100%;
+      max-width: 800px;
+    }
+
+    /* Keyframe for the stroke drawing effect */
+    @keyframes draw {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+    
+    /* Apply stroke-dasharray and stroke-dashoffset animation for circles */
+    circle {
+      fill: none;
+      stroke: #d02128;
+      stroke-width: 2;
+      stroke-dasharray: 500;
+      stroke-dashoffset: 500;
+      animation: draw 5s linear infinite;
+    }
+    circle:nth-child(1) {
+      animation-delay: 0s;
+    }
+    circle:nth-child(2) {
+      animation-delay: 0.5s;
+    }
+    circle:nth-child(3) {
+      animation-delay: 1s;
+    }
+    circle:nth-child(4) {
+      animation-delay: 1.5s;
+    }
+    circle:nth-child(5) {
+      animation-delay: 2s;
+    }
+
+    /* Apply stroke-dasharray and stroke-dashoffset animation for text */
+    text {
+
+    }
+    #first{
+      fill: none;
+      stroke: #d02128;
+      stroke-width: 5;
+      stroke-dasharray: 500;
+      stroke-dashoffset: 500;
+      animation: draw 6s linear infinite;
+    }
+
+    #second{
+      fill: none;
+      stroke: #d02128;
+      stroke-width: 1;
+      stroke-dasharray: 500;
+      stroke-dashoffset: 500;
+      animation: draw 6s linear infinite;
+    }
+  </style>
+
+  <!-- Flower above the 'I' with stroke-dasharray and stroke-dashoffset animation -->
+  <g transform="translate(187, 43)">
+    <circle cx="0" cy="0" r="8" />
+    <circle cx="-10" cy="-10" r="6" />
+    <circle cx="10" cy="-10" r="6" />
+    <circle cx="-15" cy="5" r="6" />
+    <circle cx="15" cy="5" r="6" />
+  </g>
+
+  <!-- Shoishob text with stroke-dasharray and stroke-dashoffset animation -->
+  <text id="first" x="50" y="100" font-family="Arial, sans-serif" font-size="60" font-weight="bold">
+    SHOI<span style="letter-spacing:-3">I</span>SHOB
+  </text>
+
+  <!-- Subtitle (no animation, no stroke effect) -->
+  <text id="second" x="115" y="130" font-family="'Great Vibes', 'Pacifico', 'Dancing Script', cursive" font-size="25" font-style="italic" fill="#4c4c4c">
+    Growing with style
+  </text>
+
+</svg>
