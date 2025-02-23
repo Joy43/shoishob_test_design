@@ -158,3 +158,75 @@ code----------
 )}
 
   // const Userprofileimg=user?.image?`https://fastdeals.ecommatrix.xyz/storage/app/public/profile/${user.image}`: "https://www.shareicon.net/data/128x128/2017/06/22/887604_user_512x512.png";
+
+
+  'use client';
+
+import { useState } from 'react';
+import Image from 'next/image';
+import { AiOutlineHeart } from 'react-icons/ai';
+import { FiMinus, FiPlus } from 'react-icons/fi';
+
+const ProductModal = ({ product, onClose }) => {
+  const [quantity, setQuantity] = useState(1);
+
+  const increaseQuantity = () => setQuantity(quantity + 1);
+  const decreaseQuantity = () => {
+    if (quantity > 1) setQuantity(quantity - 1);
+  };
+
+  return (
+    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+      <div className="bg-white p-6 rounded-lg w-[600px] shadow-lg relative">
+        {/* Close Button */}
+        <button className="absolute top-3 right-3 text-gray-600" onClick={onClose}>
+          ✕
+        </button>
+
+        {/* Product Image & Discount */}
+        <div className="relative flex justify-center">
+          <Image
+            src={product?.image}
+            alt={product?.name}
+            width={300}
+            height={300}
+            className="rounded-lg"
+          />
+          <span className="absolute top-2 left-2 bg-orange-500 text-white px-3 py-1 text-sm rounded">
+            -৳{product.discount}
+          </span>
+          <AiOutlineHeart className="absolute top-2 right-2 text-xl text-gray-500 cursor-pointer" />
+        </div>
+
+        {/* Product Info */}
+        <div className="mt-4">
+          <h2 className="text-xl font-semibold">{product.name}</h2>
+          <p className="text-sm text-gray-500">⭐ (0)</p>
+          <p className="text-green-600 text-sm">{product.stock} In Stock</p>
+          <p className="text-red-500 text-2xl font-bold">৳{product.price} <span className="text-gray-400 line-through">৳{product.originalPrice}</span></p>
+        </div>
+
+        {/* Quantity Selector */}
+        <div className="flex items-center mt-4">
+          <span className="mr-2">Quantity</span>
+          <button className="p-2 bg-gray-200 rounded-l" onClick={decreaseQuantity}><FiMinus /></button>
+          <input type="text" value={quantity} readOnly className="w-10 text-center border" />
+          <button className="p-2 bg-gray-200 rounded-r" onClick={increaseQuantity}><FiPlus /></button>
+        </div>
+
+        {/* Price & Buttons */}
+        <div className="mt-4">
+          <p className="text-gray-600">Total price: <span className="font-semibold">৳{product.price * quantity}</span></p>
+          <p className="text-gray-600">Tax: ৳0.00</p>
+          <div className="flex gap-4 mt-4">
+            <button className="flex-1 bg-black text-white py-2 rounded">Buy Now</button>
+            <button className="flex-1 bg-orange-500 text-white py-2 rounded">Add To Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ProductModal;
+

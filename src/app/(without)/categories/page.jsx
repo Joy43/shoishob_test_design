@@ -88,7 +88,7 @@ const Categoriesproduct = () => {
                     <div className="flex items-center justify-between">
                       <p className="font-bold text-lg">{product.unit_price}৳</p>
                       <Link
-                        href={`/categories/singlecatproduct/${product.slug}`}
+                        href={`/categories/singlecatproduct/${product?.slug}`}
                         className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
                       >
                         View Details

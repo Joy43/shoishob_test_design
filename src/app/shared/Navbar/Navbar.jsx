@@ -183,7 +183,7 @@ function Navbar() {
             onMouseLeave={() => setShowCategories(false)}
           >
             {loading ? (
-              <p className="text-gray-500 text-center py-2">Loading categories...</p>
+              <p className="text-gray-500 text-center py-2">Loadding</p>
             ) : error ? (
               <p className="text-red-500 text-center py-2">Failed to load categories</p>
             ) : (
@@ -204,8 +204,7 @@ function Navbar() {
         )}
 
         {/*------------ Display selected category-------------------- */}
-       
-
+      
         <Bottombar user={user} logout={logout} categories={categories} />
       </div>
     </div>

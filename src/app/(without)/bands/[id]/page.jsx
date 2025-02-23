@@ -43,6 +43,7 @@ console.log(singleband)
                 <div className="md:w-2/3 p-6">
                   <h1 className="text-2xl font-bold text-gray-800 mb-2">{item?.name}</h1>
                   <p className="text-sm text-gray-600 mb-4">{item?.meta_title}</p>
+                  <p className="text-sm text-gray-600 mb-4">{item?.slug}</p>
                   <div className="flex items-center mb-4">
                     {/* <span className="bg-green-500 text-white text-sm font-semibold px-2.5 py-0.5 rounded">4.5 ★</span> */}
                     <span className="text-sm text-gray-500 ml-2">{item?.reviews_count} reviews</span>
@@ -76,9 +77,12 @@ console.log(singleband)
                       Wishlist
                     </button>
                     {/* ---------view deatilsi--------- */}
-                    {/* <Link href={`/bands/singleband/${item.id}`}>
-      View Details
-    </Link> */}
+                    <Link
+                      href={`/bands/singleband/${item.slug}`}
+                      className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-900 font-bold py-2 px-4 rounded transition duration-300 text-center"
+                    >
+                      View Details
+                    </Link>
                   </div>
                 </div>
               </div>
